@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  species_name: MyString
+  habitat: MyString
+  population_status: MyString
+  park: one
+
+two:
+  species_name: MyString
+  habitat: MyString
+  population_status: MyString
+  park: two

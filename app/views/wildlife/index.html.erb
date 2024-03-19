@@ -1,0 +1,14 @@
+<head>
+<%= stylesheet_link_tag 'wildlife' %>
+</head>
+
+<body>
+<h1>List of Wildlife</h1>
+<%= paginate @wildlife %>
+<ul>
+  <% @wildlife.each do |wildlife| %>
+    <li><%= link_to wildlife.species_name, wildlife_path(wildlife) %></li>
+  <% end %>
+</ul>
+
+</body>

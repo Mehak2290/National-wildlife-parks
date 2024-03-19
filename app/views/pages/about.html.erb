@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+    <%= stylesheet_link_tag 'about' %>
+</head>
+<body>
+    <header>
+        <h1>National Wildlife Parks</h1>
+        <h2>My rails Application</h2>
+    </header>
+    <main>
+        <section>
+            <h2>Data Sources</h2>
+            <p>My rails application uses the following data sources:</p>
+            <ol>
+                <li>Parks: 100 randomly generated parks with details such as name, location, established date, size, and description.</li>
+                <li>Visitors: 200 randomly generated visitors with details such as park ID, year, total visitors, and camping visitors.</li>
+                <li>Wildlife: 200 randomly generated wildlife records with details such as park ID, species name, habitat, and population status.</li>
+                <li>Facilities: Randomly generated facilities such as visitor centers, picnic areas, playgrounds, and trails.</li>
+            </ol>
+        </section>
+        <section>
+            <h2>Entity Relationship Diagram (ERD)</h2>
+            <p>My Rails application ERD represents the relationships between the Park, Visitor, Wildlife, and Facility entities.</p>
+            <img src="<%= image_path('erd.jpg') %>" alt="ERD">
+
+
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Rails Application. All rights reserved.</p>
+    </footer>
+</body>
+</html>

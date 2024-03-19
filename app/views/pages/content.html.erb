@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Application</title>
+  <%= stylesheet_link_tag 'content' %>
+  </head>
+<body>
+
+  <ul>
+    <li><%= link_to "Parks", parks_path %></li>
+    <li><%= link_to "Wildlife", wildlife_index_path %></li>
+    <li><%= link_to "Visitors", visitors_path %></li>
+    <li><%= link_to "Facilities", facilities_path %></li>
+  </ul>
+  
+
+<%= yield %>
+
+</body>
+</html>

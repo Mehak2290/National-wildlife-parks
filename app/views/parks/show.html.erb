@@ -1,0 +1,44 @@
+<h1>Park: <%= @park.name %></h1>
+<p>Park Location: <%= @park.location %></p>
+<p>Park Established On : <%= @park.established_date %></p>
+<p>Park Size: <%= @park.size %></p>
+<p>Park Description: <%= @park.description %></p>
+
+<h2>Wildlife:</h2>
+<ul>
+  <% @wildlife.each do |wildlife| %>
+    <li><%= link_to wildlife.species_name, wildlife_path(wildlife)%></li>
+  <% end %>
+</ul>
+
+<h2>Visitors:</h2>
+<ul>
+  <% @visitors.each do |visitor| %>
+    <li><%= link_to visitor.total_visitors, visitor_path(visitor) %></li>
+  <% end %>
+</ul>
+
+<h2>Facilities:</h2>
+<ul>
+  <% @facilities.each do |facility| %>
+    <li><%= link_to facility.name, facility_path(facility) %></li>
+  <% end %>
+
+
+  <div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <% if @parks.empty? %>
+        <p>No parks found.</p>
+      <% else %>
+        <ul>
+          <% @parks.each do |park| %>
+            <li><%= park.name %></li>
+          <% end %>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+</ul>

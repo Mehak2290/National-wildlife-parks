@@ -1,0 +1,32 @@
+<head>
+<%= stylesheet_link_tag 'parks' %>
+<%= paginate @parks %>
+</head>
+
+<body>
+<h1>List of National Wildlife Parks</h1>
+
+<%= form_tag(parks_path, method: :get) do %>
+  <%= text_field_tag :query, params[:query], placeholder: "Search parks..." %>
+  <%= select_tag :category, options_for_select(["Location", "established_on", "size"], params[:category]), include_blank: "All Categories" %>
+  <%= submit_tag "Search" %>
+<% end %>
+
+<ul class="pagination">
+  <% @parks.each do |park| %>
+    <li><%= link_to park.name, park_path(park) %></li>
+  <% end %>
+</ul>
+
+# conditional erb
+<% if @parks.empty? %>
+  <p>No parks found.</p>
+<% else %>
+  <ul>
+    <% @parks.each do |park| %>
+      <li><%= park.name %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+</body>

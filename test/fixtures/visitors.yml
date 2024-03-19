@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  park: one
+  year: 1
+  total_visitors: 1
+  camping_visitors: 1
+
+two:
+  park: two
+  year: 1
+  total_visitors: 1
+  camping_visitors: 1

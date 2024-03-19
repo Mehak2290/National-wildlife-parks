@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NationalWildlifeParks</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+
+
+    <%= javascript_importmap_tags %>
+    <style>
+        .menu {
+            display: flex;
+            justify-content: space-around;
+            background-color: #336;
+            padding: 10px;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+        }
+        .menu a:hover {
+            color: #ddd;
+        }
+    </style>
+  </head>
+
+  <body>
+   <div class="menu">
+     <a href="index.html">Home</a>
+     <a href="about.html">About</a>
+    <a href="content.html">Content</a>
+   </div>
+    <%= yield %>
+    
+</body
+</html>

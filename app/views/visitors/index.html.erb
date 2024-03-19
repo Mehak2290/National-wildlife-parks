@@ -1,0 +1,13 @@
+<head>
+<%= stylesheet_link_tag 'visitors' %>
+</head>
+<body>
+<h1>List of Total Number Of Visitors</h1>
+<ul class="pagination">
+<%= paginate @visitors %>
+  <% @visitors.each do |visitor| %>
+    <li><%= visitor.total_visitors%></li>
+    <li><%= link_to visitor.year, visitors_path(visitor) %></li>
+  <% end %>
+</ul>
+</body>
