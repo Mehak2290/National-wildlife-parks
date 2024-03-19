@@ -5,8 +5,9 @@
 <h1>List of Total Number Of Visitors</h1>
 <ul class="pagination">
 <%= paginate @visitors %>
-  <% @visitors.each do |visitor| %>
+     <% @visitors.each do |visitor| %>
     <li><%= link_to visitor.total_visitors, visitors_path(visitor) %></li>
   <% end %>
 </ul>
+
 </body>
