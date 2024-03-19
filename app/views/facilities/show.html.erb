@@ -6,9 +6,8 @@
   <title>Facility Details</title>
 </head>
 <body>
-  <h1>Facility Name: &lt;%= @facility.name %&gt;</h1>
-
+  <h1>Facility Name: <%= @facility.name %></h1>
   <h2>Park:</h2>
-  <p>&lt;%= link_to @parks.name, park_path(@parks) %&gt;</p>
+  <p><%= link_to @parks.name, park_path(@parks) %></p>
 </body>
 </html>

@@ -6,8 +6,7 @@
 <ul class="pagination">
 <%= paginate @visitors %>
   <% @visitors.each do |visitor| %>
-    <li><%= visitor.total_visitors%></li>
-    <li><%= link_to visitor.year, visitors_path(visitor) %></li>
+    <li><%= link_to visitor.total_visitors, visitors_path(visitor) %></li>
   <% end %>
 </ul>
 </body>

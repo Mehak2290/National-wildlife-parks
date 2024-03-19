@@ -10,6 +10,7 @@ class ParksController < ApplicationController
       
       def show
         @park = Park.find(params[:id])
+        @parks = [@park] 
         @visitors = @park.visitors
         @facilities = @park.facilities
         @wildlife = @park.wildlife

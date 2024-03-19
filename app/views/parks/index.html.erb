@@ -11,14 +11,13 @@
   <%= select_tag :category, options_for_select(["Location", "established_on", "size"], params[:category]), include_blank: "All Categories" %>
   <%= submit_tag "Search" %>
 <% end %>
-
+g
 <ul class="pagination">
   <% @parks.each do |park| %>
     <li><%= link_to park.name, park_path(park) %></li>
   <% end %>
 </ul>
 
-# conditional erb
 <% if @parks.empty? %>
   <p>No parks found.</p>
 <% else %>
